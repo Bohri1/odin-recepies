@@ -1,1 +1,3 @@
-# odin-recepies
+Basic calculator project from Odin Project
+-Version 1.0:
+- The calculator works with clicks and keyboard
