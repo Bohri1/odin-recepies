@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Library</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="twelve column" style="margin-top: 10%;">
+          <h1>Library</h1>
+          <p>
+            This is a project from The Odin Project where I
+            have to make a library
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <form action="">
+          <div class="five columns">
+            <label for="name">Book</label>
+            <input type="text" class="u-full-width" id="name" />
+          </div>
+          <div class="five columns">
+            <label for="author">Author</label>
+            <input type="text" class="u-full-width" id="author" />
+          </div>
+
+          <nav role="navigation">
+            <ul>
+              <li id="status"><a href="#" aria-haspopup="true">Status</a>
+                <ul class="dropdown" aria-label="submenu">
+                  <li id='status-of-book' value="read">Read</li>
+                  <li id='status-of-book' value="read">Not Read</li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <input type="submit" value="submit" class="button-primary" />
+        </form>
+      </div>
+      <div class="row">
+        <div class="twelve columns"></div>
+        <table class="twelve columns">
+          <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+          <tbody id="book-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        Bohri1
+      </p>
+    </footer>
+  </body>
+</html>
+
+
+

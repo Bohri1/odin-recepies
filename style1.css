@@ -1,0 +1,97 @@
+.delete {
+  border: none;
+  background-color: rgb(228, 26, 103);
+  color: white;
+  border-radius: 25px;
+}
+.delete:hover {
+  background-color: rgb(207, 24, 94);
+  color: white;
+  border-radius: 25px;
+}
+
+.status-button {
+  background-color: rgb(189, 211, 189);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+	font-family: monospace;
+}
+
+ul {
+  /* background: linear-gradient(#D8B5FF , #1EAE98); */
+	list-style: none;
+	margin: 0 auto;
+	padding-left: 0;
+}
+
+li {
+	color: #fff;
+	display: flex;
+	float: left;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+  transition-duration: 0.5s;
+  background-color: #a010c0;
+  border-color: #a010c0;
+  margin: 0;
+  border-radius: 25px;
+  margin-top: 29px;
+  margin-left: 10px;
+}
+  
+li a {
+  color: #fff;
+  margin: 0;
+}
+
+li:hover,
+li:focus-within {
+	background: green;
+	cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+	visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+	position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+	left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+   visibility: visible;
+   opacity: 1;
+   /* display: block; */
+}
+
+ul li ul li {
+	clear: both;
+  width: 100%;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  height: auto;
+  min-height: auto;
+  line-height: normal;
+  margin: 0;
+}
