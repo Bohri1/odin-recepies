@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <!-- Choose who u wanna play against -->
+    <div id="play">
+        <h1>Choose your opponent!</h1>
+        <div id="choose-player" class="play-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+            </svg>
+            <h2>Player</h2>
+        </div>
+        <div id="choose-cpu" class="play-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cpu" viewBox="5 10 35 50">
+                <path d="M2 36.05q.4-5.3 3.25-9.825Q8.1 21.7 12.8 19.05L9.05 12.6q-.15-.45-.025-.9t.525-.7q.45-.25.975-.1.525.15.775.6l3.7 6.35Q19.3 16 24 16t9 1.85l3.75-6.35q.25-.45.775-.6.525-.15.975.1.4.25.575.725.175.475-.075.875l-3.8 6.45q4.7 2.65 7.55 7.175Q45.6 30.75 46 36.05Zm12-5.5q1 0 1.75-.75t.75-1.75q0-1-.75-1.75T14 25.55q-1 0-1.75.75t-.75 1.75q0 1 .75 1.75t1.75.75Zm20 0q1 0 1.75-.75t.75-1.75q0-1-.75-1.75T34 25.55q-1 0-1.75.75t-.75 1.75q0 1 .75 1.75t1.75.75Z"/> 
+            </svg>
+            <h2>Computer</h2>
+        </div>
+    </div>
+
+    <!-- Win msg -->
+    <!-- <div id="winner-btn" style="display:none;">
+        <h1>Green player won the round</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-msg-cloud" viewBox="5 10 35 50">
+            <path d="M15.3 21.85q.85 0 1.425-.575.575-.575.575-1.425 0-.85-.575-1.425-.575-.575-1.425-.575-.85 0-1.425.575Q13.3 19 13.3 19.85q0 .85.575 1.425.575.575 1.425.575Zm8.85 0q.85 0 1.425-.575.575-.575.575-1.425 0-.85-.575-1.425-.575-.575-1.425-.575-.85 0-1.425.575-.575.575-.575 1.425 0 .85.575 1.425.575.575 1.425.575Zm8.5 0q.85 0 1.425-.575.575-.575.575-1.425 0-.85-.575-1.425-.575-.575-1.425-.575-.85 0-1.425.575-.575.575-.575 1.425 0 .85.575 1.425.575.575 1.425.575ZM4 44V7q0-1.15.9-2.075Q5.8 4 7 4h34q1.15 0 2.075.925Q44 5.85 44 7v26q0 1.15-.925 2.075Q42.15 36 41 36H12Zm3-7.25L10.75 33H41V7H7ZM7 7v29.75Z"/>
+        </svg>
+    </div> -->
+    <div id="reset-btn" style="display:none;">
+        <h1>Green player won the round</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+            <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+            <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+        </svg>
+    </div>
+
+    </div>
+    <!-- <h1>Tic-Tac-Toe</h1> -->
+    <main>
+        <section id="p1-side" class="player-side">
+            <div class="player-name">
+                <input type="text" name="" id="p1-name" placeholder="Player 1">
+            </div>
+            <div class="player-icon">
+
+            </div>
+            <div class="player-wins">
+
+            </div>
+        </section>
+        <section class="board-side">
+            <div class="board">
+                <div class="board-square"></div>
+                <div class="board-square"></div>
+                <div class="board-square"></div>
+
+                <div class="board-square"></div>
+                <div class="board-square"></div>
+                <div class="board-square"></div>
+
+                <div class="board-square"></div>
+                <div class="board-square"></div>
+                <div class="board-square"></div>
+            </div>
+            
+            
+        </section>
+        <section id="p2-side" class="player-side">
+            <div class="player-name">
+                <input type="text" name="" id="p2-name" placeholder="Player 2">
+            </div>
+            <div class="player-icon">
+
+            </div>
+            <div class="player-wins">
+
+            </div>
+        </section>
+    </main>
+    </div>
+      <!-- <script>
+         $('button').click(function(){
+           $('.alert').addClass("show");
+           $('.alert').removeClass("hide");
+           $('.alert').addClass("showAlert");
+           setTimeout(function(){
+             $('.alert').removeClass("show");
+             $('.alert').addClass("hide");
+           },5000);
+         });
+         $('.close-btn').click(function(){
+           $('.alert').removeClass("show");
+           $('.alert').addClass("hide");
+         });
+      </script> -->
+<script src="app.js"></script>
+</body>
+</html>
